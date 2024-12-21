@@ -1,0 +1,129 @@
+Agenda (20th/dec/2024-Saturday)
+----------------------------
+9.00AM to 9.45AM     -JS Introduction
+9.45AM to 10.30AM    -Primitive Datatype and variables
+10.30AM to 10.45AM   -Classroom
+10.45AM to 11.00AM   -Break
+11.00AM to 12.00PM   -let vs var vs const
+12.00PM to 12.30PM   -Operators & conditional statement
+12.30PM to 12.45PM   -Classroom
+12.45PM to 1.00PM    -Recap
+
+npm install
+node --version
+npm install playwright
+npm init playwright
+
+file.js
+
+Javascript -->Programming language -->light weight -->1995 
+-->dynamic typing
+-->build the interactive webpage-->front end ,back end 
+
+ES script-->standard framed by ECMA (European Computer manufacture association)
+
+features:
+ -Client side validation
+ -Serverside validation
+ -Event driven arichtecture
+ -asynchronous (promises-async,await)
+
+
+ Naming conventions
+  ->dont start with special characters
+  -->utility-->csv-login.csv
+
+  .extention
+  .ts 
+  .spec.ts  -->runner file(testcase for execution)
+  .config.ts
+
+ camelCase -->loginPage.js,variablenames, functionnames,methodnames
+ pascalcase-->classnames --> LoginFunctionality
+ envvariables -->API_KEY
+
+
+ variables 
+
+ var variableName = value
+
+ string 
+ number
+ boolean
+ undefined
+ bigint =123979030469089027405740n
+
+
+Non primitive -Object
+Array
+String 
+
+
+ to avoid the redeclaration
+var vs let vs const
+i)
+ var -->redeclaration and reassignement
+ let -->not allowed to redeclare and can be reassigned
+ const -->restricts redeclaration and reassignement -->final /constant
+
+ ii) Hoisting -->brining the declartion to the top
+
+ var ->hoisting is possible 
+ hoisting is happened with declaration but cannot access variable before initialization -let and const
+
+iii)
+scoping -->visibility of the variable
+var->function scoping 
+let and const -->block scoping variables
+let username=""
+
+{
+ let pwd=""
+ console.log(username)
+}
+
+console.log(pwd)
+
+
+Operators
+ -->manipulation
+ arithmetic
+ comparision 
+ logical
+
+ +,-,*,/
+ % -->mod -remainder
+ / -->div -quotient
+
+ sum of values -234 -->2+3+4 
+ let input=234
+ 234/10 --> 23 
+ 234%10 -->4
+
+ 23 /10 = 2
+ 23%10 =3
+2
+
+ sum =4+3+2
+
+logical operators --> & |
+
+11
+ let num=10 & num>10
+  num =num+5
+
+  ++  increment  -->a++ -->a+1 
+  --  decrement  -->a-- -->a-1
+
+
+
+ fiboncci series
+
+
+
+ switch
+ forloop 
+ while ,dowhile
+ string
+ array
+
