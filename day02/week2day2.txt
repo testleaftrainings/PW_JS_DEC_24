@@ -1,0 +1,45 @@
+Today's agenda:
+---------------
+ switch
+ forloop 
+ classroom
+ while,dowhile
+ string
+ classroom
+ 
+== ->value  (loose equality)
+=== -->type of data and value (strict equality)
+
+if vs switch
+
+if -->slow 
+  ->comparision based  (==,>=,<=)
+switch-->fast
+
+-------
+Looping statment -->iterating the same logic
+forloop -->index based , for in , for of, for each
+   -->iterate when implementing with testdata/ scan through multiple values
+while -->pagination
+do while
+
+String -
+
+madam==madam
+
+vidya =aydiv   -->true
+aydiv
+length of word
+  character
+  reverse it -->loop
+
+
+Pallindrome/Reverse/occurence of letter in string
+
+
+
+
+
+
+
+ 
