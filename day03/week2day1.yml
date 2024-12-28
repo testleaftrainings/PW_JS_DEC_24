@@ -1,0 +1,87 @@
+Agenda:
+-------
+Array : 
+   --> Array intro and its methods   
+   --> Classroom
+   Break 
+Function types: 
+   -> function declaration(named function) 
+   -> function expression
+   -> anonumous function
+   -> arrow function
+   -> callback function
+   -> Promises ->resolve,reject,async and await 
+      Classroom
+   Break
+Playwright Introduction :
+    ->  Playwright Architecture
+    -> BrowserContext, Browser and Page
+           
+-------------------------------
+Array(java)-> group of elements together
+     ->holding same type of data
+     ->fixed size
+     ->FIFO
+     ->duplicates allowed
+
+string companyName =["Testleaf","qeagle","google"]
+Js
+-->group any type of data under single variable (hetrogeneous array)
+-->not fixed in size
+
+let browser=["Chrome",true,120]
+
+length
+push
+unshift
+pop
+shift
+splice ->delete, count of elements to del and insert the element from the deleted position
+
+[1,2,3,4,5]
+
+[2,3,4,5,6]
+
+arr1[0]==arr2[0]
+arr1[0]==arr2[1]
+
+for(arr1 as length){
+  for(arr2 as length){
+    arr1[i]===arr[j]
+  
+  }
+}
+
+Function -->writing th business logic / create a resuable code
+
+Function declaration /Named function
+
+math(2,4)
+
+function math(a,b){
+ return a+b
+}
+
+
+math(14,15)
+
+
+Funtion types
+1.Function Expression:
+add()
+->cannot be hoisted
+let add= function (){
+
+}
+
+add()
+
+2.Arrowfunction:
+()=>{}
+
+3.callbackfunction: calling one function as a paramter to other function
+function mth((a,b)=>a+b)
+test (``,()=>{})
+
+
+
