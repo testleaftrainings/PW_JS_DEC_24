@@ -1,0 +1,50 @@
+Agenda:
+------
+ Promises ->resolve,reject,async and await 
+      Break
+Playwright Introduction :
+    ->  Playwright Architecture
+    ->  BrowserContext, Browser and Page
+      classroom
+
+To callback hell -->promise is implemented -->object 
+
+
+enter username  -->promise  -->by entered with data/throw error without next step
+enter password
+click login
+wait for sometime  -->wait 
+click applauncher    
+
+
+3 states
+Promise -->pending
+         -->fulfilled (resolved)
+        --> cancelled (Rejected)
+
+
+Install playwright
+
+npm init playwright@latest
+
+execution
+
+npx playwright test filename
+
+
+
+configuration 
+
+test level   -->high priority
+project level -->next priority
+global level  -->lowest prioirty
+
+or 
+
+through command line
+
+
+
+
+
+    
