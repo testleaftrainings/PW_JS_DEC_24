@@ -1,0 +1,217 @@
+Agenda:
+------
+Understanding DOM
+Basic Locators(CSS)(id,class)
+Classroom
+Playwright locators/XPath
+Break
+Classroom
+Dropdown
+Classroom
+Advanced CSS / XPath
+
+
+DOM -->document object model
+  -->developer tool
+  3ways
+    right click and use inspect option
+    click on 3 dots-->more tools -->developertools
+    using keyboard shortcut -->ctrl +shift +i
+<html>
+    <head>
+        <title>Demo</title>
+    </head>
+    <body>
+      <div>
+        <label>Username</label>
+        <input id="username"></input>
+      </div>
+    </body>
+</html>
+
+
+
+<img> -impart the images
+<button> -create button
+<a>  -link
+<span>
+<select> -->dropdown
+<textarea> -->input type of tag
+
+href -->hypertext reference -->http://amazon.com?pdt=
+
+
+attribute -->information about the respective element
+
+id-unique information
+class -->grouping the elements based on CSS 
+name -->name of the attribute
+data-testId -->unique 
+role -->type of the element -->button, checkbox, list
+placeholder -->unique element -->element name
+
+
+3ways to locate an element
+--------------------------
+CSS selectors
+Xpath
+Playwright locators
+
+
+Best practices to choose the locators
+ -->unique
+ -->stable
+ -->readable
+
+
+id
+class 
+name
+link
+
+
+CSS Slectors
+------------
+
+ locate an element      
+     attributName and attributeValue , tag
+
+<input class="inputLogin" type="text" id="username" name="USERNAME" size="50">
+
+1.id attribute  
+
+   1.  syntax : #idValue           
+         example: #username
+   2.  syntax: [attributeName="attributeValue"]
+          example: [id="username"]
+   3.  syntax: tagname[attributeName="attributeValue"]
+         example: input[id="username"]
+  4.   syntax: tagname#attributeValue
+         example: input#username
+
+2.class attribute
+<input class="decorativeSubmit" type="submit" value="Login">
+  1.  syntax: .classValue
+           example : .decorativeSubmit
+  2.  syntax: [attributeName="attributeValue"]
+           example: [class="decorativeSubmit"]
+  3.  syntax: tagname[attributeName="attributeValue"]
+          example:  input[class="decorativeSubmit"]
+  4.  syntax: tagname.attributeValue
+        example: input.decorativeSubmit
+  
+
+3. name
+<input class="inputLogin" type="password" id="password" name="PASSWORD" size="50">
+
+   1. #password
+   2. input[name="PASSWORD"]
+
+4. to locate element using text
+text=textValue
+text=CRM/SFA
+
+5.partial matches
+tagname[attributeName$="attributeValue"] -->suffix matches
+tagname[attributeName^="attributeValue"]  -->prefix matches
+tagname[attributeName*="attributeValue"]  -->contains
+
+
+6.CSS -->index based
+ nth()
+ first()
+ last()
+
+
+await page.locator("#createLeadForm_primaryPhoneCountryCode").clear()
+await page.locator("#createLeadForm_primaryPhoneCountryCode").fill("2")
+
+
+Resusable:
+
+const countryCode=page.locator("#createLeadForm_primaryPhoneCountryCode")
+
+await countryCode.clear()
+await countryCode.fill("2")
+
+Launch the Salesforce url
+enter the username -> vidyar@testleaf.com
+enter the password -> Sales@123
+click on Login  
+verify the page title (Home | Salesforce)
+
+when not to use the attributes
+numbers 
+duplicates
+
+whitespaces
+
+
+xpath syntax:
+
+xml path --> address of the element in the dom page
+
+absolute xpath  -->all tags
+   starts with / 
+   roottag -> html
+ /html/body/div[2]/div[2]/div/form/p[1]/input
+   
+relative xpath:
+   starts with //currentnode (tagname)
+   //tagname[@attribute="attributeValue"]
+
+
+attribute-based xpath
+   //input[@id="username"]
+
+textbased xpath
+  //tagname[text()="textValue"]
+  //a[text()="  CRM/SFA  "]
+
+partial based text xpath
+
+//tagname[contains(text(),'textValue')]
+//a[contains(text(),'CRM')]
+
+partial attribute based xpath
+//tagname[contains(@attName,'attValue')] 
+//div[contains(@class,"img")]
+
+collection based xpath
+   use the index only when the match less than 5
+(relative xpath)[index] -->index starts with 1
+(//div[contains(@class,"img")])[2]  //partial
+
+(//input[@class='inputLogin'])[2] //attribute based
+
+
+
+to get the all the product price
+
+const product=page.locator("[class="a-price-whole"]")
+
+await product.count()  -->24
+
+console.log(await product.allInnerText()) -->prints the black colour text in the console
+
+timeOut exception -->wrong locator
+Error: strict mode violation:  ->duplicate locators
+
+
+Dropdown elements
+----------------
+ -->actual ele --><select>
+ selectOption 
+   using index
+   using label -->using black text
+   using value -->value attribute
+   
+ non select dropdown --> click on the element ==>click -->ele
+
+ advanced xpath
+
+ parent to child 
+ (relativexapth)/child
+
+ //select[@class='ui-selectonemenu']/option
+
