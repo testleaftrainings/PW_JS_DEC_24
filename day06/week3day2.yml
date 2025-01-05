@@ -1,0 +1,170 @@
+Agenda:
+-------
+ playwrightLocators 
+ assertions/autowait-40 mins
+ advanced xpath/css -40 mins
+   parent -child
+   sibiling
+   cousin
+ Typescript fundamentals 
+Advanced Xpath:
+
+parent -child:
+(relative xpath)/child tagname(relative xpath-Optional)
+
+//p[@class='top']/label
+
+child to parent:
+
+(relative xpath of the child)/parent::parent tagname
+//input[@class="decorativeSubmit"]/parent::p
+
+sibiling:
+   elder 
+   younger
+
+elder to younger (top to bottom)
+ --------------------------------
+(elder relative xpath)/following-sibling::tagname of younger
+//label[text()='Username']/following-sibling::input
+
+younger to elder(bottom to top)
+----------------------------
+(younger relative xpath)/preceding-sibling::tagename of elder
+//input[@id='username']/preceding-sibling::label
+
+cousin:
+------
+  elder
+  younger
+
+elder to younger (top to bottom)
+ --------------------------------
+(elder relative xpath)/following::tagname of younger
+//p[@class='top']/following::p
+(//label[text()="Username"]/following::input)[2]
+
+younger to elder(bottom to top)
+----------------------------
+(younger relative xpath)/preceding::tagename of elder
+//input[@class="decorativeSubmit"]/preceding::label
+
+
+grandchild to grandparent:
+//input[@class="decorativeSubmit"]/ancestor::div
+
+
+grandparent to grandchild:
+//form[@id='login']//label 
+
+Advanced css syntax:
+--------------------
+
+form[id='login'] label  parent child
+
+label[for='username'] ~ input
+
+
+--------------------------------------------------------
+
+
+
+Playwright locator
+
+getByRole --> link,combobox, checkbox,button
+
+getByPlaceholder -->attribute as placeholder
+
+getBytitle--> title attribute
+
+getByaltText  -->alt with respect to the image
+
+getBytestId--> data-testid
+
+
+Assertion
+--------
+ element type -->web first assertion -->boolean return
+
+ comparing actual with expected result -->assertion
+
+ Assertion 
+  hard -stops the execution when assertion failed
+  soft -continue the execution and collects the error log 
+
+ expect -->playwright library -timeout 5s
+
+   non retrying    
+   retrying
+
+Assertion types
+Generic type
+Locator type
+Page Type
+Screenshot assertion
+API assertion
+Negating assertions
+  expect().not.contain()
+
+Actionability check on action
+visible
+stable
+enable
+attached
+receive event
+
+
+Typescript 
+-----------
+ js-->dynamic typing
+   -->prototype
+   -->light weight 
+   -->runtime exception
+
+ superset of js
+ all the features as js but interface,genenric
+ ts -->static typing-->type safety
+   ->heavy weight
+   ->compile time exception
+
+install typescript
+
+globally 
+  npm install -g typescript
+
+locally
+ npm install typescript --save-dev
+
+check version 
+
+tsc --version
+
+to execute js
+ node filename.js
+
+to execute ts
+  
+  ts -->transpiled-->js 
+  execute as js file
+
+compile ts -->js
+  tsc filename.ts
+-------------------------
+string
+number
+boolean
+null
+array
+undefined
+
+type inference
+  let username ="vidya"  -->implicity infered as string
+  usernme=123
+
+  let username:string; -->explicitly infering that as string
+
+object literal --> defines the data in key value pair
+
+
+
+
