@@ -1,0 +1,80 @@
+Agenda:(Saturday)
+------
+Recap on Typescript 
+Typescript Assertions
+Enum 
+Function Parameter
+classroom
+Alert
+Break 
+Frame 
+Classroom
+
+
+Typescript Assertion
+ -->type casting-->informing the typescript compiler to infer the data as string
+let pdtPrice;
+
+
+{
+    prodPrice= element.innertext()  //string
+
+}
+
+
+<>variable
+as -->infer the type of the variable
+
+ENUM -->Enumeration 
+
+  -->named constant 
+
+  week name-->Monday 
+  country name
+  Passed,Failed,Timeout
+
+
+default type of Enum will be numeric
+numeric Enum
+string Enum
+hetrogenous Enum
+---------------------------------
+
+function parameter
+
+function cal(x:number,y:number):number{
+
+}
+
+default parameter: variable will be assigned with a value
+a:number=5
+optional parameter: varaible?:type of data
+z?:number
+
+function cal(x:number,y:number,z?:number,a:number=5):number{}
+
+----------------------------------
+Alert -->notification /pop up
+  message/popup/notification from the application
+  javascript function
+
+Modal Alert:
+  it is not inspectable and not ignorable
+ ##3 types of  modal alert
+  simple alert -->only one button ok to accept the alert
+  confirm alert-->allows to take decision as to accept / reject (ok/Cancel)
+  Prompt alert-->takes the input from the user and then allows you to take decision as to accept /dismiss
+
+
+  Non-Modal:
+    -->sweet alert -->can be inspectable and cannot be ignored
+
+
+ Behaviour of the playwright :
+   1. alerts are auto dismissed by default(not mandatory to handle the alert explicitly)
+
+   2. To explicitly handle the alert
+     use event listeners
+     -->for whole script -->page.on
+     -->individual alert -->page.once 
+
