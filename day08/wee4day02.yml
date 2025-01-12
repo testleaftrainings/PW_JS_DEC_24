@@ -1,0 +1,83 @@
+
+Agenda:
+Recap of Alert
+Frame
+Classroom
+Windowhandle
+Classroom
+FileUpload and Download
+classroom
+
+waitforEvent
+waitforTimeOut
+waitforloadState  -->load -->load the dom(HTML) along with all the external resources (Image/css)
+                  -->domcontentloaded-->HTML (Dom) to loaded
+
+waitforSelector
+waitforFuntion
+waitforrequest
+waitforresponse 
+
+Frame:
+-----
+  frame--> design another webelement /webpage into other webPage
+
+  iframe-->inline frame
+     ->HTML inside another HTML
+     -->DOM inside another DOM
+
+     <html>  -->oneindia
+     <head>
+     <body>
+     <span>
+      <div>
+       <iframe> </iframe> 1st frame  -->outerfrme located-->childframe() -->array of frame
+        <html>          length ->2
+      
+           <iframe>  inner/child frame  -->0
+              <html> 
+                <div>
+                <button>
+              </html
+           </iframe>    -->1
+           <iframe>
+            <html> 
+                <div>
+                <button>
+              </html
+           </iframe>      
+         </html> -->salesforce ad
+     </html>
+to handle the frames:
+-->frameobject  -->simple application 
+-->frameLocator  -->complex app
+
+Window handling:
+
+sequential approach  
+concurrent approach 
+
+
+create a promise -->wait for event -->listener
+click on the button
+promise resolved
+
+https://leafground.com/window.xhtml
+create promise
+click on open
+resolve it
+enter the email add in the childpage(new instance)
+verify the title of the parent page
+
+upload/download, locator chaining
+test data parametrization(csv, env, json)
+
+configuration
+test runner -->group testcase/parallel & serial
+storageState,
+persistentcontext
+codegen -->test generator
+
+
+
+
