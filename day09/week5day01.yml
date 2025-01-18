@@ -1,0 +1,137 @@
+Agenda:
+------
+Recap
+Data Parametrization-csv/json
+Classroom 
+Data Parametrization-env file
+Classroom
+File Upload/Download
+Skip Login/ storage state
+classroom
+
+csv -comma separated values
+.csv
+
+Tc001,vidya,R,TL
+
+step:1 --> install csv-parse
+ npm install csv-parse
+
+step:2 --> use parse() --> imported from csv-parse/sync
+parse(pathofthefile)
+
+step:3 -->install fs (file system)
+npm install fs
+
+TestCaseId,Username,Pasword
+TC001,demoSalesManager,crmsfa
+TC002,demoCSR,crmsfa
+
+Each row will be considered as one test 
+2 tests -->unique desc of the test
+
+path.join(__dirname,"") -->current directory with the filepath
+path.resolve(__dirname,"")
+
+columns-->true -->read first row as header
+
+to read single data
+
+
+test(`Learn to read CSV values ${loginCredentials[0].TestCaseId}`, async ({page}) => {
+    await page.goto("http://leaftaps.com/opentaps/control/login")
+    await page.locator("#username").fill(loginCredentials[0].Username)
+    await page.fill("#password",loginCredentials[0].Pasword)
+    await page.click(".decorativeSubmit") 
+    })
+
+    json -->javascript object notation
+
+    key value pair
+
+
+import loginInfo from '../../constants/login.json'
+
+test(`Read json data`,async()=>{
+for(let login of loginInfo){
+    console.log(login.Username)
+}
+})
+
+For json -->salesforce login
+for CSV --> create Lead -->firstname, lastname and companyname
+
+create a folder -->data 
+ files for SF_login.json -->salesforce login
+  vidyar@testleaf.com
+  Sales@123
+leadData.csv  ->creating the lead
+
+
+env -->environment file
+-->db ,api token, crendetials -->qa, prod, api
+
+to read data from env file
+
+step:1  -->install dotenv
+npm install dotenv
+
+step:2 --> prod.env
+dotenv.config({path:`constants/prod.env`})
+
+Multiple file to read
+const fileTORead=process.env.envFile
+dotenv.config({path:`constants/${fileTORead}.env`})
+
+set the filename
+$env:envFile="staging"
+
+unset
+$env:envFile=""
+
+to know which file is set for execution
+$env:envFile
+
+
+config file to set the environment
+
+npx playwright test filename.spec.ts --config=playwright.staging.config.ts
+
+install run 
+
+npm install run --save-dev
+
+run dev
+
+package.json
+"scripts": {
+   "run.staging": "npx playwright test learnEnv.spec.ts  --config=playwright.staging.config.ts",
+   "run.qa": "npx playwright test filename.spec.ts  --config=playwright.qa.config.ts",
+    "run.all": "run.staging run.qa"  
+  },
+
+
+  File upload
+  -----------
+
+  DOM -->element which takes the file as input -->
+  <input> type="file"
+
+  Setinputfile()
+  eventlistner -->waitforEvent('filechooser')
+
+
+filter()-->for locator chaining
+
+tomorrow agenda
+--------------
+storagestate, persistentContext
+test runner 
+grouping /parallel /serial (global,project,testspecfic)
+grep(tags, title)
+
+--config
+--debug
+--headed
+--ui
+--report
