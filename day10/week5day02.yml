@@ -1,0 +1,54 @@
+Agenda:
+-------
+storagestate
+persistentContext
+test runner 
+grouping /parallel /serial (global,project,testspecfic)
+grep(tags)
+codegen -generate (record and playback)
+
+StorageState -->cookies
+ skip the login-->store the login info
+
+persistentContext-->stores the cookies 
+                -->normal browser -->guest
+
+testAnnotations-->configure the behaviour of the test
+
+test.only -->runs the tests which is marked as only
+test.skip -->skip the particular test from execution
+test.fixme -->informs the test has be fixed for the bug
+test.slow
+test.info  
+test.describe
+
+smoke,regression
+crud -->create, update, dele
+serial --> inject the dependency(one after other)
+parallel -->run in parallel mode
+sequential -->default mode-->all test executes one after the other but dont depends on the status of the previous test
+
+reporter123556
+reporter46789
+
+
+grep -->global regular expression
+   -->regex
+
+test tile -->matching with the text pattern in the test title
+   npx playwright test -g smoke 
+   npx playwright test --grep smoke 
+
+test.spec.ts(file)-->matching with test file name
+   npx playwright test create
+
+  test.beforeAll
+  test.beforeEach
+  test
+  test.afterEach
+  test.beforeEach
+  test
+  test.afterEach
+  test.afterAll
+
+  codegen -->code generator
