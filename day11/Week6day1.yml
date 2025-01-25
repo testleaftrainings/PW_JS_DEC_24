@@ -1,0 +1,177 @@
+Agenda:
+--------
+ Recap
+ API Introduction
+ Headers 
+ Break 
+ API with Postman (CURD operation)
+ Classroom
+ Global Variables
+ Classroom
+
+API -Application Programming interface
+
+HTTP methods
+Authentication
+Headers
+Response code
+
+HTTPS Method/CRUD op/ Verbs
+----------------------------
+POST -->create a new resource
+PATCH(updating)--> To update the resource /partial update the existing resource
+PUT(updating) -->To replace complete information of existing resource/ creates a new resources
+GET -->fetch the data 
+DELETE -->delete the record
+
+Authentication-->verifies the user identity
+ No Authentication
+ OAuth
+ Basic Authentication
+ JWT
+ API KEY
+
+Authorization -->permission provided to the user
+uri -->universal resource identifier
+      url and urn
+      universal resource locator -->https://www.google.com
+      universal resource name -->domain
+
+data/payload
+  body of data  to send to create/ update the resource
+
+status codes
+1xx -->information
+2xx-->success message
+   200 -->sucess 
+   201 -->post -->success
+   204 -->delete -->No Content
+3xx--->Redirectional
+4xx-->client
+  400 -->Bad request
+  401-->unauthorized
+  403 -->forbidden
+  404 -->Not found -->resource is not available
+  409 -->conflict
+5xx -->server
+  500-->Internal server error
+  501-->req is not avialble -->req is not implemented 
+  502  -->Bad gateway
+  503 -->service unavailable
+  505 -->gateway timeout
+
+Endpoint --> url -->https://domain.service-now.com/api/now/table/incident
+
+https://MyDomainName.my.salesforce.com/services/data/v63.0/sobjects/Account/
+
+
+Path Parameter --> filters for the respective resource
+Query Parameter -->Data filters
+
+Authorization-what permission/access vs Authentication -Who you are 
+
+Basic Auth
+OAuth- >open authorization -->token (expiry date)
+
+
+status of the request 
+
+post -->create a resource --> successful -->response code
+response 201 /200  -->response test -->created
+
+Get request using global variable
+https://dev216320.service-now.com/api/now/table/incident/{{Incident_id}}
+response code
+200 ->OK
+
+3 different variables
+Global  ->all collection access the variable
+
+
+
+Collection -->Specific to the collection
+Environment -->Specific to enviroment -->QA/DEV/PROD
+
+
+
+
+{
+  result:{
+    sys_id:"" 
+  }
+}
+
+GET -> Fetch all the change request
+Endpoint:  https://dev216320.service-now.com/api/now/table/change_request
+Basic AUth :
+ admin
+UY2mOUe^7p@f
+
+No body
+
+Post ->
+Endpoint:  https://dev216320.service-now.com/api/now/table/change_request
+Basic AUth :
+ admin
+UY2mOUe^7p@f
+
+Body :
+{
+
+}
+
+response code -201
+
+script to store the global variable form the response
+var res = pm.response.json()
+
+var sys_ID=res.result.sys_id
+pm.globals.set("Incident_id", sys_ID);
+pm.collectionVariables.set("variable_key", "variable_value");
+
+
+Patch ->
+Endpoint:  https://dev216320.service-now.com/api/now/table/change_request/unique id
+Basic AUth :
+ admin
+UY2mOUe^7p@f
+
+Body :
+{
+
+}
+
+response code  -200 0k
+
+Delete ->
+Endpoint:  https://dev216320.service-now.com/api/now/table/change_request/unique id
+Basic AUth :
+ admin
+UY2mOUe^7p@f
+
+response -204 No Content
+
+
+
+{
+  result
+  {
+    "sys_id":""
+  }
+}
+
+var pm.response.json().result.sys_id
+
+salesforce token generation endpoint
+https://login.salesforce.com/services/oauth2/token
+
+
+
+{
+    "access_token": "00D5h0000098pgR!AQwAQIolZetsNvWhqpXv_tZl5AYNSyxjjSYgJfT0c3GuRBRXsRDaTGC7m8uFk61TENWUwz5KtoeDntSXr9_Xx80BWrMz_SB2",
+    "instance_url": "https://testleaf-da-dev-ed.develop.my.salesforce.com",
+    "id": "https://login.salesforce.com/id/00D5h0000098pgREAQ/0055h00000AnfC0AAJ",
+    "token_type": "Bearer",
+    "issued_at": "1737790575313",
+    "signature": "+RgRibsE1AJzmi3yMZov4svQy2ds25CETD9YFrmHiP4="
+}
