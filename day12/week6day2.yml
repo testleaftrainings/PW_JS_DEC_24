@@ -1,0 +1,60 @@
+Agenda:
+--------
+Recap
+API Integration with Playwright(Post and Get-servicenow)
+Classroom
+Break 
+End to End Scenario
+Classroom
+Screenshot,Visual regression testing,tracing
+
+API Testing:
+
+api documentation
+uri-->endpoints
+parameters-->path-resource /query parameter -->filter
+payload/body
+Http methods
+auth details
+Headers
+ResponseCode/status
+ResponseBody
+schema
+
+page fixtures --> 
+ browSesion= browserType.launch() 
+ context=browsession.newContext()  -->BrowserContext
+ page=context.newPage()
+
+ Playwright with api
+
+ APIRequestcontext -->associated with the browserContext
+ Request calls
+ browSesion= browserType.launch() 
+ context=browsession.newContext()  -->BrowserContext
+ context.request -->APIRequestcontext
+
+
+respBody=request.httpMethod(endpoint,{headers,data})
+resourcData=respBody.json()
+resourceData.id,sys_id
+
+Salesforce
+
+token generation-Bearer
+Http methods
+request body
+response body
+assertion
+
+
+faker -->generate random test data
+npm install @faker-js/faker
+
+
+
+
+
+
+
+
