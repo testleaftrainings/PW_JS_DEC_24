@@ -1,0 +1,120 @@
+Agenda:
+------
+Recap
+Introduction to OOPs & Classes & Object
+Constructor & Access modifier
+Break
+Inheritance
+Classroom
+Polymorphism
+Classroom
+
+
+Object oriented Programming language -->object 
+
+Modularity 
+Reusability 
+Avoid Redundancy 
+scalability 
+Maintainable and readable
+
+
+Javascript -->object oriented -->prototype based  
+Typescript -->object oriented 
+
+Object 
+Class
+4 pillars of OOPs
+
+Inheritance
+Abstraction
+Polymorphism
+Encaspulation
+
+car
+
+Class -->collection of attributes (Sharing css)
+     -->blueprint (Model house) -->live -->structure /idea
+     -->design 
+
+  properties/attribute /method of class
+  information -->noofseats, brakesystem, typeoffuel,brandName,
+  function -->applygear/break, winshiledon, makehorn
+
+object -->Maruthi ,Kia,audi -->luxiouros
+
+constructor --> allocates the memory/ initilaizes the object 
+ -->excuted in the first 
+
+ const pdt= new Amazon()
+  Amazon() -->default constructor
+  Amazon("pdtname") -->parametrized constructor
+
+Create a file as loginpage.ts
+create class for Salesforcelogin and export the class
+
+initialize the constructor with page property
+
+create methods
+loadUrl(){ 
+  //add the step to load url using goto()
+   }
+
+ doLogin()
+ {
+   steps to add enter credential
+   fill(username)
+   fill(password)
+   click(login) 
+ }
+
+ create a spec file
+ use test runner ({page})=>{
+ create obj for the SalesforceLogin class 
+ call loadurl and doLogin()
+ }
+
+Access modifier -->scope of a method in a class
+  -->public (default) 
+  -->private -->specific to the class
+  -->protected -->specific to the class and accessible by the extended class(inheritance)
+   is a relation 
+   subclass/derived class/ childclass is extended from Parent/Baseclass /supername
+  
+  Inheritance 
+   is a relationship 
+   extends
+
+   single inheritance
+   multilevel inheritance
+   a->b
+   a->b->c
+   Hirerchial inheritance
+   a->b
+   a->c
+   a->d
+   mutiple inheritance --> not aplicable with ts  
+   a-->b,c 
+
+Polymorphism 
+  a method takes differnet impl
+
+  method overloading-->happens within the class for same methods diff implementation
+               -->method signature will have different args
+  method overriding  -->related with inheritance 
+             same method signature should possessed by both subclass and parent class
+             implementation/logic will be different
+             super-->access the parent class methods
+             clickLeads()
+
+  Encapsulation : -->binding of data and methods
+get and set method  using private methods/variables
+
+Abstraction:
+-----------
+ hiding the internal details and showing required details to the user 
+
+ 100%     -->fully abstraction -->interface-->method signature
+ 0- 100%  -->partial abstraction-->abstractclass   -->implementation, unimplemented method
+
+Object creation is not allowed 
